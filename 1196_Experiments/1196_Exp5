@@ -1,1 +1,23 @@
+let cart = [
+    {name: "Flowerpot", price: 1200, quantity: 2},
+    {name: "Curtains", price: 1500, quantity: 1},
+    {name: "Frame", price: 2300, quantity: 3}
+]
 
+let total = cart.reduce((sum, item) => {
+    return sum + (item.price * item.quantity);
+}, 0);
+
+let discount = 0;
+if (total > 1000) {
+    discount = total * 0.10;
+}
+
+let finalAmount = total - discount;
+
+console.log("================================");
+console.log("SHREYA'S (1196)CART CALCULATOR")
+console.log("================================");
+console.log("Total: " + total);
+console.log("Discount: " + discount);
+console.log("Final Amount: " + finalAmount);
